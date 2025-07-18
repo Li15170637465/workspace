@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <time.h>
+#include <windows.h>  // Windows 专用头文件
+
+int main() {
+    while(1) {
+        time_t now;
+        time(&now);  // 获取当前时间
+        printf("当前时间: %s", ctime(&now));
+        
+        Sleep(10000);  // Windows 的 Sleep(毫秒)
+    }
+    
+    return 0;
+}
+
+    printf("cycleTimes:\n");
+    printf("healthStatus:\n");
+    printf("foodEnergy:%d\n");
+    printf("bedTime:%d\n");
+    printf("airQuality:%d\n");
+    printf("waterVolume:%d\n");
+    printf("toiletPlace:%d\n");
+    printf("warEnvironment:%d\n");
+
+
+life(int cycleTimes)
+maintain(int healthStatus)
+eat(int foodEnergy)
+sleep(int bedTime)
+breath(int airQuality)
+drink(int waterVolume)
+excretion(int toiletPlace)
+warm(int clothingEnvironment)
+
+cycleTimes
+healthStatus
+foodEnergy
+bedTime
+airQuality
+
+
+
+
+
+
+
+
+
+
+
+
+

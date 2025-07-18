@@ -1,0 +1,11 @@
+#include <stdio.h>
+vodi(double x, double y){
+    int max = 0;
+    if (x > y)
+    {
+    }
+}
+
+
+int main(){
+    
