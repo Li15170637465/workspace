@@ -24,7 +24,7 @@
   "C_Cpp.default.cStandard": "c11",
   "C_Cpp.default.cppStandard": "c++17",
   "C_Cpp.intelliSenseEngine": "Tag Parser",
-  "C_Cpp.autocomplete": "Default",
+  "C_Cpp.autocomplete": "default",
   "cSpell.words": [
     "csbi",
     "gameover"
@@ -93,5 +93,5 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "windows.h": "c"
-  }
+  },
 }

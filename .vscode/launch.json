@@ -32,7 +32,7 @@
       "cwd": "d:/workspace/Lifecyclev1.0",
       "program": "d:/workspace/Lifecyclev1.0/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "D:/mingw64/bin/gdb.exe",
+      "miDebuggerPath": "gdb",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
