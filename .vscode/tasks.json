@@ -53,14 +53,55 @@
         {
             "label": "🚀 智能提交推送",
             "type": "shell",
-            "command": "${workspaceFolder}/commit.bat",
+            "command": "git add . && git commit -m \"自动提交: $(date +'%Y-%m-%d %H:%M')\" && git push origin main",
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "git add . && git commit -m \"自动提交: %date:~0,4%-%date:~5,2%-%date:~8,2% %time:~0,2%:%time:~3,2%\" && git push origin main"
+                ]
+            },
             "group": {
                 "kind": "build",
                 "isDefault": false
             },
             "presentation": {
-                "reveal": "always"
-            }
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
         }
+        //  {
+        //     "label": "🚀 智能提交推送",
+        //     "type": "shell",
+        //     "command": "git add . && git commit -m \"自动提交: $(date /t) $(time /t)\" && git push origin main",
+        //     "windows": {
+        //         "command": "cmd",
+        //         "args": [
+        //             "/c",
+        //             "git add . && git commit -m \"自动提交: %date% %time%\" && git push origin main"
+        //         ]
+        //     },
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": false
+        //     },
+        //     "presentation": {
+        //         "reveal": "always",
+        //         "panel": "shared"
+        //     }
+        // }
+        // {
+        //     "label": "🚀 智能提交推送",
+        //     "type": "shell",
+        //     "command": "${workspaceFolder}/commit.bat",
+        //     "group": {
+        //         "kind": "build",
+        //         "isDefault": false
+        //     },
+        //     "presentation": {
+        //         "reveal": "always"
+        //     }
+        // }
     ]
 }
