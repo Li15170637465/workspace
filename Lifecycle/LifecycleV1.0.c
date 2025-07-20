@@ -80,7 +80,6 @@ int main()
 
 
         start:
-
             time_t now;
             time(&now);
             printf("current time:%s\n", ctime(&now));
