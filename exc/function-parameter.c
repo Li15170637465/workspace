@@ -1,4 +1,4 @@
-#include <stdio.h>
+// #include <stdio.h>
 // 函数参数
 //  int add(int a, int b) {
 //      return a + b;
@@ -104,6 +104,7 @@ int main()
             }
         }
     }
+    
     printcharArray(arr, nums);
 
     return 0;

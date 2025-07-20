@@ -1,0 +1,9 @@
+# cmake_minimum_required(VERSION 3.10)
+# # 设置 C 标准
+# set(CMAKE_C_STANDARD 11)
+
+# # 查找当前目录下所有的 .c 文件，保存到 SRC_LIST 变量
+# file(GLOB SRC_LIST "${CMAKE_SOURCE_DIR}/*.c")
+
+# # 生成可执行文件 main.exe（或 main）
+# add_executable(main ${SRC_LIST})

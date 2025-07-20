@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <windows.h>
+
+extern int a;
+
+//gcc 
+
+
+int main(){
+    int n=f1();
+    int b;
+    printf("%d\n", n);
+    printf("%d\n", a);
+    scanf("%d", &b);
+    // system("pause");
+    return 0;
+}
