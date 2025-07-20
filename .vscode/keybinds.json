@@ -1,5 +1,9 @@
-{
-    "key": "ctrl+alt+g",
-    "command": "workbench.action.tasks.runTask",
-    "args": "智能提交推送" 
-}
+[
+    {
+        "key": "ctrl+alt+h",  
+        "command": "workbench.action.tasks.runTask",
+        "args": {
+            "task": "smart-commit-push"  
+        }
+    }
+]

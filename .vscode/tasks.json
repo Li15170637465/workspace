@@ -51,7 +51,7 @@
             "detail": "调试器生成的任务。"
         },
         {
-            "label": "智能提交推送",
+            "label": "smart-commit-push",
             "type": "shell",
             "command": "git add . && git commit -m \"自动提交: $(date +'%Y-%m-%d %H:%M')\" && git push origin main",
             "windows": {
