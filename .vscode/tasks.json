@@ -51,7 +51,7 @@
             "detail": "调试器生成的任务。"
         },
         {
-            "label": "🚀 智能提交推送",
+            "label": "智能提交推送",
             "type": "shell",
             "command": "git add . && git commit -m \"自动提交: $(date +'%Y-%m-%d %H:%M')\" && git push origin main",
             "windows": {
@@ -71,37 +71,5 @@
             },
             "problemMatcher": []
         }
-        //  {
-        //     "label": "🚀 智能提交推送",
-        //     "type": "shell",
-        //     "command": "git add . && git commit -m \"自动提交: $(date /t) $(time /t)\" && git push origin main",
-        //     "windows": {
-        //         "command": "cmd",
-        //         "args": [
-        //             "/c",
-        //             "git add . && git commit -m \"自动提交: %date% %time%\" && git push origin main"
-        //         ]
-        //     },
-        //     "group": {
-        //         "kind": "build",
-        //         "isDefault": false
-        //     },
-        //     "presentation": {
-        //         "reveal": "always",
-        //         "panel": "shared"
-        //     }
-        // }
-        // {
-        //     "label": "🚀 智能提交推送",
-        //     "type": "shell",
-        //     "command": "${workspaceFolder}/commit.bat",
-        //     "group": {
-        //         "kind": "build",
-        //         "isDefault": false
-        //     },
-        //     "presentation": {
-        //         "reveal": "always"
-        //     }
-        // }
     ]
 }

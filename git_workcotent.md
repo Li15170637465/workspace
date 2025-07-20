@@ -173,11 +173,23 @@ D --> E[新任务/修复]
 
 在 VSCode 中，使用源代码管理视图（`Ctrl+Shift+G`）可以直观地管理所有状态。养成"小步提交"的习惯（每完成一个小功能就提交一次），能有效减少挂起状态的困扰。
 
-
-
 ## 每周检查
 
 ```
+
+
 git log --oneline --graph --since="1 week"
 
+
+
 ```
+
+
+## 一键提交配置
+
+快捷键: `Ctrl+Alt+G`
+功能: 自动执行：
+
+- git add .
+- git commit -m "自动提交: [当前时间]"
+- git push origin main

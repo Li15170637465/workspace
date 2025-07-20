@@ -1,5 +1,5 @@
 {
     "key": "ctrl+alt+g",
     "command": "workbench.action.tasks.runTask",
-    "args": "🚀 智能提交推送" 
+    "args": "智能提交推送" 
 }
