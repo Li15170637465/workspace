@@ -29,10 +29,10 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/workspace/AI_Make",
-      "program": "d:/workspace/AI_Make/build/Debug/outDebug",
+      "cwd": "d:/workspace/Lifecyclev1.0",
+      "program": "d:/workspace/Lifecyclev1.0/build/Debug/outDebug",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "D:/mingw64/bin/gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",

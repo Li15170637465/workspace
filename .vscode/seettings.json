@@ -17,7 +17,18 @@
   "explorer.confirmDelete": false,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.smoothScrolling": true,
-  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": "cmd.exe",
+      "args": [],
+      "icon": "terminal-cmd"
+    }
+  },
   "workbench.colorTheme": "One Dark Pro Mix",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
