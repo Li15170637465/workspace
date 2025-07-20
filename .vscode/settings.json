@@ -18,7 +18,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Mix",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "C_Cpp.default.cStandard": "c11",

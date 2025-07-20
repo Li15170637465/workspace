@@ -49,6 +49,18 @@
             ],
             "group": "build",
             "detail": "调试器生成的任务。"
+        },
+        {
+            "label": "🚀 智能提交推送",
+            "type": "shell",
+            "command": "${workspaceFolder}/commit.bat",
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always"
+            }
         }
     ]
 }
