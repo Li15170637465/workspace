@@ -1,9 +1,0 @@
-[
-    {
-        "key": "ctrl+alt+h",  
-        "command": "workbench.action.tasks.runTask",
-        "args": {
-            "task": "smart-commit-push"  
-        }
-    }
-]

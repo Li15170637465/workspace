@@ -93,5 +93,5 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "windows.h": "c"
-  },
+  }
 }

@@ -1,0 +1,55 @@
+#include "music_player.h"
+#include <windows.h>
+
+int main() {
+    PlayerState* player = init_player();
+    play_music(player, "D:\\workspace\\AI_Make\\music.mp3"); // 替换为你的实际文件路径
+    
+    Sleep(3000);
+    pause_music(player);
+    Sleep(1000);
+    resume_music(player);
+    Sleep(2000);
+    stop_music(player);
+    
+    cleanup_player(player);
+    return 0;
+}
+
+
+
+// #include "music_player.h"
+// #include <windows.h>
+// #include <io.h>  // 添加在main.c顶部
+
+
+// int main()
+// {   
+    
+//     // 在play_music调用前添加
+//     // if (_access(filename, 0) == -1) {
+//     // printf("错误: 文件不存在: %s\n", filename);
+//     // return 1;
+
+
+//     PlayerState* player = init_player();
+//     printf("是否选择下一首\n");
+//     printf("按下D键进入下一首歌曲\n");
+//     char next = getchar();
+//     switch(next){
+//         case 'D':
+//         case 'd':
+
+//     }
+//     play_music(player, "D:\\workspace\\AI_Make\\bgm1.wav");
+//     // play_music(player, "bgm1.wav");  
+//     // Sleep(3000);       
+//     pause_music(player);
+//     // Sleep(1000);       
+//     resume_music(player);
+//     // Sleep(2000);       
+//     stop_music(player);
+    
+//     cleanup_player(player);
+//     return 0;
+// }
