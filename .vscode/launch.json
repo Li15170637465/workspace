@@ -29,8 +29,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/workspace/music_player",
-      "program": "d:/workspace/music_player/build/Debug/outDebug",
+      "cwd": "d:/workspace/exc",
+      "program": "d:/workspace/exc/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
