@@ -6,54 +6,55 @@
 int main() {
     PlayerState* player = init_player();
     
-    // åˆ›å»ºæ’­æ”¾åˆ—è¡¨
+    // ´´½¨²¥·ÅÁĞ±í
     char* playlist[] = {
-        "D:\\workspace\\AI_Make\\song1.wav",
-        "D:\\workspace\\AI_Make\\song2.wav",
-        "D:\\workspace\\AI_Make\\song3.wav"
+        "D:\\workspace\\music_player\\song1.wav",
+        "D:\\workspace\\music_player\\song2.wav",
+        "D:\\workspace\\music_player\\song3.wav",
+        "D:\\workspace\\music_player\\song4.wav"
     };
     int playlist_size = sizeof(playlist) / sizeof(playlist[0]);
     
-    // è®¾ç½®æ’­æ”¾åˆ—è¡¨
+    // ÉèÖÃ²¥·ÅÁĞ±í
     set_playlist(player, playlist, playlist_size);
     
-    printf("===== éŸ³ä¹æ’­æ”¾å™¨ =====\n");
-    printf("å½“å‰æ’­æ”¾åˆ—è¡¨:\n");
+    printf("===== ÒôÀÖ²¥·ÅÆ÷ =====\n");
+    printf("µ±Ç°²¥·ÅÁĞ±í:\n");
     for (int i = 0; i < playlist_size; i++) {
         printf(" %d. %s\n", i + 1, playlist[i]);
     }
     printf("\n");
     
-    // æ’­æ”¾ç¬¬ä¸€é¦–
-    printf("æ’­æ”¾ç¬¬ä¸€é¦–...\n");
+    // ²¥·ÅµÚÒ»Ê×
+    printf("²¥·ÅµÚÒ»Ê×...\n");
     play_current(player);
     
-    // æ¨¡æ‹Ÿç”¨æˆ·æ“ä½œ
-    Sleep(3000);       // æ’­æ”¾3ç§’
+    // Ä£ÄâÓÃ»§²Ù×÷
+    Sleep(3000);       // ²¥·Å3Ãë
     
-    printf("\nåˆ‡æ¢åˆ°ä¸‹ä¸€é¦–...\n");
+    printf("\nÇĞ»»µ½ÏÂÒ»Ê×...\n");
     next_track(player);
-    Sleep(300000);       // æ’­æ”¾3ç§’
+    Sleep(300000);       // ²¥·Å3Ãë
     
-    printf("\nåˆ‡æ¢åˆ°ä¸Šä¸€é¦–...\n");
+    printf("\nÇĞ»»µ½ÉÏÒ»Ê×...\n");
     prev_track(player);
-    Sleep(300000);       // æ’­æ”¾3ç§’
+    Sleep(300000);       // ²¥·Å3Ãë
     
-    printf("\næš‚åœæ’­æ”¾...\n");
+    printf("\nÔİÍ£²¥·Å...\n");
     pause_music(player);
-    Sleep(100000);       // æš‚åœ1ç§’
+    Sleep(100000);       // ÔİÍ£1Ãë
     
-    printf("\nç»§ç»­æ’­æ”¾...\n");
+    printf("\n¼ÌĞø²¥·Å...\n");
     resume_music(player);
-    Sleep(200000);       // å†æ’­æ”¾2ç§’
+    Sleep(200000);       // ÔÙ²¥·Å2Ãë
     
-    printf("\nåœæ­¢æ’­æ”¾...\n");
+    printf("\nÍ£Ö¹²¥·Å...\n");
     stop_music(player);
     
     cleanup_player(player);
     
-    // æ·»åŠ ç­‰å¾…ï¼Œé˜²æ­¢ç¨‹åºç«‹å³é€€å‡º
-    printf("\nç¨‹åºæ‰§è¡Œå®Œæ¯•ï¼ŒæŒ‰å›è½¦é”®é€€å‡º...");
+    // Ìí¼ÓµÈ´ı£¬·ÀÖ¹³ÌĞòÁ¢¼´ÍË³ö
+    printf("\n³ÌĞòÖ´ĞĞÍê±Ï£¬°´»Ø³µ¼üÍË³ö...");
     getchar();
     
     return 0;
