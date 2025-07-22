@@ -5,6 +5,7 @@
   "editor.rulers": [
     120
   ],
+  "C_Cpp.errorSquiggles": "enabled",
   "editor.smoothScrolling": true,
   "editor.guides.bracketPairs": true,
   "editor.mouseWheelZoom": true,
@@ -18,7 +19,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "workbench.colorTheme": "One Dark Pro Mix",
+  "workbench.colorTheme": "Viow Light",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "C_Cpp.default.cStandard": "c11",
@@ -93,6 +94,5 @@
     "stdio.h": "c",
     "stdlib.h": "c",
     "windows.h": "c"
-  },
-  "C_Cpp.errorSquiggles": "enabled"
+  }
 }

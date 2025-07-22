@@ -65,37 +65,115 @@
 
 // 4. 定义函数，返回某个字符在字符串中第一次出现的位置	   
 //    函数原型: int firstIndex(char *, char)
-   #include<stdio.h>
+//    #include<stdio.h>
 
-   int firstIndex(char *str, char ch){
-       int count;
-       while (*str != '\0')
-       {
-           if (*str != ch)
-           {
-               count++;
-           }else{
-               str += count;
-           }
-       }
-       return str;
-   }
+//    int firstIndex(char *str, char ch){
+//        int count=1;
+//        while (*str != '\0')
+//        {
+//            if (*str != ch)
+//            {
+//                count++;
+//            }else{
 
-   int main(){
-       char text[100];
-       char target;
-       printf("Enter a string\n");
-       scanf("%99s", text);
-       printf("Enter the letter\n");
-       scanf("%c", &target);
-       int =
-   }
+//                return count;
+//            }
+//            str++;
+//        }
+// }
+
+//    int main(){
+//        char text[100];
+//        char target;
+//        printf("Enter a string\n");
+//        scanf("%99s", text);
+//        printf("Enter the letter\n");
+//        scanf(" %c", &target);
+//        int count = firstIndex(text, target);
+//        printf("Letter %c is place %d in the string \n", target, count);
+//        return 0;
+//    }
 // 5. 定义函数，返回某个字符在字符串中最后一次出现的位置  
 //    函数原型: int lastIndex(char *, char)
-  
+// #include<stdio.h>
+// int lastIndex(char *str, char ch){
+//     int len = strlen(str);
+//     for (int i = len - 1; i >= 0;i--){
+//         if(ch==str[i]){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+// int main(){
+//     char text[100];
+//     char target;
+//     printf("Enter a string\n");
+//     scanf("%99s", text);
+//     printf("Enter the letter\n");
+//     scanf(" %c", &target);
+//     int pos = lastIndex(text, target);
+//     printf("the letter %c appears of the string is %dth position \n", target, pos+1);
+//     return 0;
+// }
 // 6. 定义函数 实现字符串中小写字母转大写字母； 	
 //    函数原型: char *upperCase(char *)
-   
+//    #include<stdio.h>
+//    char *upperCase(char *str){
+//        char *original = str;
+//        while(*str!='\0'){
+//         if(*str>='a'&& *str<='z'){
+//             *str = *str - 32;
+//         }
+//         str++;
+//        }
+//        return original;
+//    }
+//    int main(){
+//        char input[100];
+//        printf("Enter a string\n");
+//        fgets(input, sizeof(input), stdin);
+//        for (char *p = input; *p != '\0'; p++)
+//        {
+//            if (*p == '\n')
+//            {
+//                *p = '\0';
+//                break;
+//            }
+//        }
+//        printf("original characters\n%s\n", input);
+//        char *result = upperCase(input);
+//        printf("the converted string\n%s\n ", result);
+//        return 0;
+//    }
 // 7. 定义函数 实现字符串中大写字母转小写字母；    
 //    函数原型: char *lowerCase(char *)
-   
+
+//     #include<stdio.h>
+//    char *lowerCase(char *str){
+//        char *original = str;
+//        while(*str!='\0'){
+//         if(*str>='A'&& *str<='Z'){
+//             *str = *str + 32;
+//         }
+//         str++;
+//        }
+//        return original;
+//    }
+//    int main(){
+//        char input[100];
+//        printf("Enter a string\n");
+//        fgets(input, sizeof(input), stdin);
+//        for (char *p = input; *p != '\0'; p++)
+//        {
+//            if (*p == '\n')
+//            {
+//                *p = '\0';
+//                break;
+//            }
+//        }
+//        printf("original characters\n%s\n", input);
+//        char *result = lowerCase(input);
+//        printf("the converted string\n%s\n ", result);
+//        return 0;
+//    }

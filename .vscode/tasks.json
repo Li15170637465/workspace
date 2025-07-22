@@ -11,8 +11,8 @@
                 "-Wextra",
                 "-std=c11",
                 "-I${workspaceFolder}\\include",
-                "${workspaceFolder}\\src\\main.c",
-                "${workspaceFolder}\\src\\network.c",
+                "${workspaceFolder}\\main.c",
+                "${workspaceFolder}\\network.c",
                 "-o",
                 "${workspaceFolder}\\bin\\main.exe",
                 "-fexec-charset=GBK",
@@ -63,7 +63,7 @@
             },
             "group": {
                 "kind": "build",
-                "isDefault": false
+                "isDefault": true
             },
             "presentation": {
                 "reveal": "always",
