@@ -19,7 +19,7 @@
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.smoothScrolling": true,
   "terminal.integrated.defaultProfile.windows": "Command Prompt",
-  "workbench.colorTheme": "Viow Light",
+  "workbench.colorTheme": "One Dark Pro Night Flat",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
   "C_Cpp.default.cStandard": "c11",
@@ -93,6 +93,9 @@
   "files.associations": {
     "stdio.h": "c",
     "stdlib.h": "c",
-    "windows.h": "c"
+    "windows.h": "c",
+    "cmath": "c",
+    "requires_hosted.h": "c",
+    "typeinfo": "c"
   }
 }
