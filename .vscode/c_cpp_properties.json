@@ -6,22 +6,43 @@
         "${workspaceFolder}/**"
       ],
       "defines": [
-        "_DEBUG"
+        "_DEBUG",
+        "__USE_C99_MATH"
       ],
       "compilerPath": "D:/mingw64/bin/gcc.exe",
       "cStandard": "${default}",
       "cppStandard": "${default}",
       "intelliSenseMode": "windows-gcc-x64",
       "compilerArgs": [
-        "-fexec-charset=GBK"
+        "-fexec-charset=UTF-8"
       ],
       "browse": {
         "path": [
           "${workspaceFolder}",
-          "D:/mingw64/include"
+          "D:/mingw64/include",
+          "D:/mingw64/arm-none-eabi/include"
         ],
         "limitSymbolsToIncludedHeaders": true
       }
+    },
+    {
+      "name": "ARM-GCC",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "D:/mingw64/arm-none-eabi/include"
+      ],
+      "defines": [
+        "STM32F4",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "D:/mingw64/bin/arm-none-eabi-gcc.exe",
+      "cStandard": "c17",
+      "intelliSenseMode": "gcc-arm",
+      "compilerArgs": [
+        "-mcpu=cortex-m4",
+        "-mthumb",
+        "-mfpu=fpv4-sp-d16"
+      ]
     }
   ],
   "version": 4

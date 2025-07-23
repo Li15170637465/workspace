@@ -1,0 +1,244 @@
+{
+  "configurations": [
+    {
+      "name": "windows-gcc-x64",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "D:/mingw64/arm-none-eabi/include"
+      ],
+      "defines": [
+        "_DEBUG",
+        "__USE_C99_MATH"
+      ],
+      "compilerPath": "D:/mingw64/bin/gcc.exe",
+      "cStandard": "c17", 
+      "cppStandard": "c++20",
+      "intelliSenseMode": "windows-gcc-x64",
+      "compilerArgs": [
+        "-fexec-charset=UTF-8"  
+      ],
+      "browse": {
+        "path": [
+          "${workspaceFolder}",
+          "D:/mingw64/include",
+          "D:/mingw64/arm-none-eabi/include"
+        ],
+        "limitSymbolsToIncludedHeaders": true
+      }
+    },
+    {
+      "name": "ARM-GCC",
+      "includePath": [
+        "${workspaceFolder}/**",
+        "D:/mingw64/arm-none-eabi/include"
+      ],
+      "defines": [
+        "STM32F4",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "D:/mingw64/bin/arm-none-eabi-gcc.exe",
+      "cStandard": "c17",
+      "intelliSenseMode": "gcc-arm",
+      "compilerArgs": [
+        "-mcpu=cortex-m4",
+        "-mthumb",
+        "-mfpu=fpv4-sp-d16"
+      ]
+    }
+  ],
+  "version": 4
+}
+
+
+launch.json
+
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C Debug",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/bin/main.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "miDebuggerPath": "D:/mingw64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "Cortex Debug",
+      "cwd": "${workspaceRoot}",
+      "executable": "${workspaceRoot}/build/firmware.elf",
+      "request": "launch",
+      "type": "cortex-debug",
+      "servertype": "openocd",
+      "device": "STM32F407VG",
+      "configFiles": [
+        "interface/stlink.cfg",
+        "target/stm32f4x.cfg"
+      ]
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "d:/workspace",
+      "program": "d:/workspace/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
+
+
+tasks.json
+
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-g",
+        "-Wall",
+        "-Wextra",
+        "-std=c17", 
+        "-I${workspaceFolder}/include",
+        "${workspaceFolder}/src/*.c",  
+        "-o",
+        "${workspaceFolder}/bin/main.exe",
+        "-fexec-charset=UTF-8",  
+        "-static-libgcc",
+        "-lm",
+        "-fno-common",
+        "-ffunction-sections",
+        "-fdata-sections"
+      ],
+      "group": "build",
+      "problemMatcher": "$gcc",
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated"
+      }
+    },
+    {
+      "label": "build-arm",
+      "type": "shell",
+      "command": "arm-none-eabi-gcc",
+      "args": [
+        "-mcpu=cortex-m4",
+        "-mthumb",
+        "-specs=nano.specs",
+        "-T${workspaceFolder}/linker.ld",
+        "-Wl,-Map=output.map",
+        "-o",
+        "${workspaceFolder}/build/firmware.elf",
+        "${workspaceFolder}/src/*.c"
+      ],
+      "group": "build"
+    }
+  ]
+}
+
+
+
+settings.json
+
+{
+  "editor.fontSize": 20,
+  "editor.tabSize": 4,
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "variable": "#E06C75",
+      "parameter": "#D19A66",
+      "function": "#61AFEF"
+    }
+  },
+  "editor.semanticHighlighting.enabled": true,
+  "embeddedTools.armToolchainPath": "D:/mingw64/bin",
+  "files.encoding": "utf8",
+  "files.autoGuessEncoding": true,
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_path": "D:/mingw64/bin/clang-format.exe",
+  "C_Cpp_Runner.cCompilerPath": "gcc",
+  "C_Cpp_Runner.cppCompilerPath": "g++",
+  "C_Cpp_Runner.debuggerPath": "gdb",
+  "C_Cpp_Runner.cStandard": "",
+  "C_Cpp_Runner.cppStandard": "",
+  "C_Cpp_Runner.msvcBatchPath": "C:/Program Files/Microsoft Visual Studio/VR_NR/Community/VC/Auxiliary/Build/vcvarsall.bat",
+  "C_Cpp_Runner.useMsvc": false,
+  "C_Cpp_Runner.warnings": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Wshadow",
+    "-Wformat=2",
+    "-Wcast-align",
+    "-Wconversion",
+    "-Wsign-conversion",
+    "-Wnull-dereference"
+  ],
+  "C_Cpp_Runner.msvcWarnings": [
+    "/W4",
+    "/permissive-",
+    "/w14242",
+    "/w14287",
+    "/w14296",
+    "/w14311",
+    "/w14826",
+    "/w44062",
+    "/w44242",
+    "/w14905",
+    "/w14906",
+    "/w14263",
+    "/w44265",
+    "/w14928"
+  ],
+  "C_Cpp_Runner.enableWarnings": true,
+  "C_Cpp_Runner.warningsAsError": false,
+  "C_Cpp_Runner.compilerArgs": [],
+  "C_Cpp_Runner.linkerArgs": [],
+  "C_Cpp_Runner.includePaths": [],
+  "C_Cpp_Runner.includeSearch": [
+    "*",
+    "**/*"
+  ],
+  "C_Cpp_Runner.excludeSearch": [
+    "**/build",
+    "**/build/**",
+    "**/.*",
+    "**/.*/**",
+    "**/.vscode",
+    "**/.vscode/**"
+  ],
+  "C_Cpp_Runner.useAddressSanitizer": false,
+  "C_Cpp_Runner.useUndefinedSanitizer": false,
+  "C_Cpp_Runner.useLeakSanitizer": false,
+  "C_Cpp_Runner.showCompilationTime": false,
+  "C_Cpp_Runner.useLinkTimeOptimization": false,
+  "C_Cpp_Runner.msvcSecureNoWarnings": false
+}
